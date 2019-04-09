@@ -20,12 +20,12 @@ public class Main implements CommandLineRunner {
 
 
     public void run(String... args) throws Exception {
-//        Email email = new Email();
-//        email.setFrom("franciscoantoniogarciaquintana@gmail.com");
-//        email.setTo("tony_16_fagq@hotmail.com");
-//        email.setSubject("This is a test mail");
-//        email.setMessageText("This is a sample text message.");
-//        emailService.sendEmail(email);
-//        System.out.println("email enviado!!!..");
+        Email email = new Email();
+        email.setFrom("franciscoantoniogarciaquintana@gmail.com");
+        email.setTo("tony_16_fagq@hotmail.com");
+        email.setSubject("This is a test mail");
+        email.setMessageText("This is a sample text message.");
+        emailService.sendEmail(email);
+        System.out.println("email enviado!!!..");
     }
 }

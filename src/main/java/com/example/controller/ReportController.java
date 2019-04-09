@@ -22,8 +22,13 @@ import java.io.InputStream;
 public class ReportController {
 
 
-    @Autowired
+
     private ReportService reportService;
+
+    @Autowired
+    ReportController( ReportService reportService) {
+        this.reportService = reportService;
+    }
 
 //    @GetMapping( path = "/report")
 //    ResponseEntity<String>  index() {
