@@ -8,6 +8,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+
 import javax.mail.internet.MimeMessage;
 import javax.mail.util.ByteArrayDataSource;
 
@@ -36,7 +37,7 @@ public class MailServiceImpl implements MailService {
             mimeMessageHelper.setText(mail.getMessageText(), true);
             ByteArrayDataSource byteArrayDataSource = null;
             byteArrayDataSource = new ByteArrayDataSource(attachement, "application/pdf");
-            mimeMessageHelper.addAttachment( "report.pdf", byteArrayDataSource);
+            mimeMessageHelper.addAttachment("report.pdf", byteArrayDataSource);
 
             System.out.println("Start of mail");
             emailSender.send(mimeMessage);
